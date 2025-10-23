@@ -52,7 +52,7 @@ const ProjectsPage = () => {
       color: "text-ai-purple",
       demoImage: chatLlmDemo,
       demoImgModal: llmModal,
-      githubUrl: "https://github.com/username/chat-llm"
+      githubUrl: "https://github.com/Johnkoji2/chat-ui"
     },
     {
       icon: Eye,
@@ -107,12 +107,12 @@ const ProjectsPage = () => {
       title: "Transcription Automatique",
       description: "Mise en place d'un système pour convertir la parole en texte en temps réel avec support multilingue.",
       descriptionModal: "Un système de transcription automatique qui convertit la parole en texte en temps réel.",
-      technologies: ["Whisper", "SpeechRecognition", "WebRTC", "Node.js"],
+      technologies: ["Whisper", "Python", "SpeechRecognition", "WebRTC", "Node.js"],
       category: "Audio Processing",
       color: "text-tech-blue",
       demoImage: transcriptionDemo,
       demoImgModal: transcriptionModal,
-      githubUrl: "https://github.com/username/transcription-automatique"
+      githubUrl: "https://github.com/Johnkoji2/transcription"
     },
     {
       icon: Building,
@@ -136,7 +136,7 @@ const ProjectsPage = () => {
       color: "text-primary",
       demoImage: schoolManagementDemo,
       demoImgModal: scolariteModal,
-      githubUrl: "https://github.com/username/gestion-scolarite"
+      githubUrl: "https://github.com/Johnkoji2/Scolarite"
     },
     {
       icon: Folder,
