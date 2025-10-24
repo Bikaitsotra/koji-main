@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import AnimatedBackground from "@/components/AnimatedBackground";
+
 import { 
   Code, Database, Monitor, Settings, Terminal, 
   Layers, Globe, Cpu, Smartphone
@@ -56,6 +58,7 @@ const SkillsPage = () => {
 
   return (
     <div className="py-20">
+      <AnimatedBackground />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Header */}

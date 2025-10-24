@@ -2,13 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Mail, Phone, MessageCircle, MapPin, Globe, 
-  Plane, Users, Waves, Trophy 
+  Plane, Users, Waves, Trophy, FileText, Download 
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import cvPdf from "@/assets/pdf/CV.pdf";
 
 const AboutPage = () => {
   const contactInfo = [
     { icon: Mail, label: "Email", value: "johnbikaitsotra@gmail.com" },
-    { icon: Phone, label: "Téléphone", value: "+261 34 88 562 27 / +261 32 47 705 05"},
+    { icon: Phone, label: "Téléphone", value: "+261 34 88 562 27 / +261 32 47 705 05" },
     { icon: MessageCircle, label: "WhatsApp", value: "+261 38 38 670 92" },
     { icon: MapPin, label: "Adresse", value: "Lot 8F23 Andranomainty MANAKARA" },
   ];
@@ -21,7 +24,8 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="py-20">
+    <div className="py-20 relative">
+      <AnimatedBackground />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Header */}
@@ -94,7 +98,7 @@ const AboutPage = () => {
                   Langues
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-6">
                 <div className="flex flex-wrap gap-2">
                   {languages.map((language, index) => (
                     <Badge key={index} variant="secondary" className="px-3 py-1">
@@ -102,6 +106,19 @@ const AboutPage = () => {
                     </Badge>
                   ))}
                 </div>
+                
+                {/* CV Download Button */}
+                <Button 
+                  className="w-full group relative overflow-hidden"
+                  variant="default"
+                  onClick={() => window.open(cvPdf, '_blank')}
+                >
+                  <div className="flex items-center justify-center gap-2 relative z-10">
+                    <FileText className="w-4 h-4" />
+                    <span>Télécharger mon CV</span>
+                    <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+                  </div>
+                </Button>
               </CardContent>
             </Card>
 

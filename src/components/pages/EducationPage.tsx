@@ -4,6 +4,7 @@ import {
   GraduationCap, Award, Calendar, MapPin, 
   Star, Book, Users, Trophy
 } from "lucide-react";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const EducationPage = () => {
   const education = [
@@ -73,7 +74,8 @@ const EducationPage = () => {
   ];
 
   return (
-    <div className="py-20">
+    <div className="py-20 relative">
+      <AnimatedBackground />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Header */}

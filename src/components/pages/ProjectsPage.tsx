@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageModal from "@/components/ui/image-modal";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import { 
   Bot, Eye, Settings, MessageSquare, Home, 
   Mic, Building, GraduationCap, ExternalLink,
@@ -76,7 +77,7 @@ const ProjectsPage = () => {
       color: "text-accent",
       demoImage: fineTuningDemo,
       demoImgModal: funtinModal,
-      githubUrl: "https://github.com/username/fine-tuning-llm"
+      githubUrl: "https://github.com/Johnkoji2/tiniLLama"
     },
     {
       icon: MessageSquare,
@@ -168,6 +169,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="py-20">
+      <AnimatedBackground />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Header */}
