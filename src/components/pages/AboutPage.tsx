@@ -6,7 +6,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedBackground from "@/components/AnimatedBackground";
-import cvPdf from "@/assets/CV.pdf";
 
 const AboutPage = () => {
   const contactInfo = [
@@ -111,7 +110,7 @@ const AboutPage = () => {
                 <Button 
                   className="w-full group relative overflow-hidden"
                   variant="default"
-                  onClick={() => window.open(cvPdf, '_blank')}
+                  onClick={() => window.open('../assets/pdf/CV.pdf', '_blank')}
                 >
                   <div className="flex items-center justify-center gap-2 relative z-10">
                     <FileText className="w-4 h-4" />
