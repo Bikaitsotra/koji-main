@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Mail, Phone, MapPin, MessageCircle, Linkedin, Github, Clock, Calendar, Globe } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 interface HomePageProps {
   onNavigate: (page: string) => void;
@@ -9,7 +10,8 @@ interface HomePageProps {
 
 const HomePage = ({ onNavigate }: HomePageProps) => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <AnimatedBackground />
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 hero-gradient opacity-10"></div>

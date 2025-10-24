@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageModal from "@/components/ui/image-modal";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import { 
   Bot, Eye, Settings, MessageSquare, Home, 
   Mic, Building, GraduationCap, ExternalLink,
@@ -52,7 +53,7 @@ const ProjectsPage = () => {
       color: "text-ai-purple",
       demoImage: chatLlmDemo,
       demoImgModal: llmModal,
-      githubUrl: "https://github.com/username/chat-llm"
+      githubUrl: "https://github.com/Johnkoji2/chat-ui"
     },
     {
       icon: Eye,
@@ -76,7 +77,7 @@ const ProjectsPage = () => {
       color: "text-accent",
       demoImage: fineTuningDemo,
       demoImgModal: funtinModal,
-      githubUrl: "https://github.com/username/fine-tuning-llm"
+      githubUrl: "https://github.com/Johnkoji2/tiniLLama"
     },
     {
       icon: MessageSquare,
@@ -107,12 +108,12 @@ const ProjectsPage = () => {
       title: "Transcription Automatique",
       description: "Mise en place d'un système pour convertir la parole en texte en temps réel avec support multilingue.",
       descriptionModal: "Un système de transcription automatique qui convertit la parole en texte en temps réel.",
-      technologies: ["Whisper", "SpeechRecognition", "WebRTC", "Node.js"],
+      technologies: ["Whisper", "Python", "SpeechRecognition", "WebRTC", "Node.js"],
       category: "Audio Processing",
       color: "text-tech-blue",
       demoImage: transcriptionDemo,
       demoImgModal: transcriptionModal,
-      githubUrl: "https://github.com/username/transcription-automatique"
+      githubUrl: "https://github.com/Johnkoji2/transcription"
     },
     {
       icon: Building,
@@ -136,7 +137,7 @@ const ProjectsPage = () => {
       color: "text-primary",
       demoImage: schoolManagementDemo,
       demoImgModal: scolariteModal,
-      githubUrl: "https://github.com/username/gestion-scolarite"
+      githubUrl: "https://github.com/Johnkoji2/Scolarite"
     },
     {
       icon: Folder,
@@ -168,6 +169,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="py-20">
+      <AnimatedBackground />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Header */}

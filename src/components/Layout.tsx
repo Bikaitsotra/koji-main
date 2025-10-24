@@ -106,7 +106,7 @@ const Layout = ({ children, currentPage, onNavigate }: LayoutProps) => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-secondary/50 border-t border-border mt-20">
+      <footer className="bg-background/80 backdrop-blur-md border-t border-border mt-20">
         <div className="container mx-auto px-4 py-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Brand Section */}
