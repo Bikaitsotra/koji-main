@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedBackground from "@/components/AnimatedBackground";
-import cvPdf from "@/assets/pdf/CV.pdf";
+import cvPdf from "@/assets/CV.pdf";
 
 const AboutPage = () => {
   const contactInfo = [
