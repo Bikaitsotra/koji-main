@@ -149,7 +149,7 @@ const ProjectsPage = () => {
       color: "text-primary",
       demoImage: portfolioDemo,
       demoImgModal: portfolioModal,
-      githubUrl: "https://github.com/username/gestion-scolarite"
+      githubUrl: "https://github.com/Johnkoji2/Scolarite"
     },
     {
       icon: ShoppingCart,
@@ -161,7 +161,7 @@ const ProjectsPage = () => {
       color: "text-primary",
       demoImage: venteDemo,
       demoImgModal: venteModal,
-      githubUrl: "https://github.com/username/gestion-scolarite"
+      githubUrl: "https://github.com/Johnkoji2/eden-wine"
     }
   ];
 
