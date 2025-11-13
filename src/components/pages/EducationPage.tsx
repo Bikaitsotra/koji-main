@@ -35,7 +35,7 @@ const EducationPage = () => {
     {
       year: "2017-2018",
       degree: "Baccalauréat Scientifique (Série D)",
-      institution: "LPM - Manakara",
+      institution: "Lycée Présentation De Marie Manakara",
       description: "Formation scientifique avec spécialisation en mathématiques et sciences",
       color: "text-primary"
     }
@@ -72,6 +72,12 @@ const EducationPage = () => {
     "Science des Données", "Développement Full-Stack", "Bases de Données",
     "Communication", "Formation", "Leadership", "Gestion de Projet"
   ];
+
+  // Fonction pour ouvrir Google Maps
+  const openInMap = (institution: string) => {
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(institution)}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <div className="py-20 relative">
@@ -140,6 +146,17 @@ const EducationPage = () => {
                             </Badge>
                           </div>
                         )}
+
+                        {/* Bouton pour ouvrir Google Maps */}
+                        <div className="flex justify-end mt-2">
+                          <button
+                            onClick={() => openInMap(edu.institution)}
+                            className="px-3 py-1 text-xs bg-primary text-white rounded hover:bg-primary/80 transition-smooth flex items-center gap-1"
+                          >
+                            <MapPin className="w-3 h-3" />
+                            Voir sur Google Maps
+                          </button>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>

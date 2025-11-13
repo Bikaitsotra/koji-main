@@ -82,7 +82,9 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
             
             {/* Primary Contact Methods */}
             <div className="grid md:grid-cols-4 gap-6 mb-12">
-              <Card className="card-gradient border-border hover:glow-accent transition-smooth group cursor-pointer">
+              <Card className="card-gradient border-border hover:glow-accent transition-smooth group cursor-pointer"
+                  onClick={() => window.location.href = 'mailto:johnbikaitsotra@gmail.com?subject=Demande de collaboration&body=Bonjour John, je souhaiterais discuter d\'un projet avec vous...'}
+              >
                 <CardContent className="p-6 text-center">
                   <Mail className="w-10 h-10 text-accent mx-auto mb-4 group-hover:scale-110 transition-smooth" />
                   <h4 className="font-semibold mb-2">Email Principal</h4>
@@ -94,20 +96,60 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
                 </CardContent>
               </Card>
 
-              <Card className="card-gradient border-border hover:glow-accent transition-smooth group cursor-pointer">
-                <CardContent className="p-6 text-center">
-                  <Phone className="w-10 h-10 text-accent mx-auto mb-4 group-hover:scale-110 transition-smooth" />
-                  <h4 className="font-semibold mb-2">Téléphone</h4>
-                  <p className="text-muted-foreground text-sm mb-1">+261 34 88 562 27</p>
-                  <p className="text-muted-foreground text-sm mb-2">+261 32 47 705 05</p>
-                  <div className="flex items-center justify-center text-xs text-accent">
-                    <Calendar className="w-3 h-3 mr-1" />
-                    Lun-Ven 8h-18h
-                  </div>
-                </CardContent>
-              </Card>
+             <Card className="card-gradient border-border hover:glow-accent transition-smooth group">
+  <CardContent className="p-6 text-center">
+    <Phone className="w-10 h-10 text-accent mx-auto mb-4 group-hover:scale-110 transition-smooth" />
+    <h4 className="font-semibold mb-4">Téléphone</h4>
 
-              <Card className="card-gradient border-border hover:glow-accent transition-smooth group cursor-pointer">
+    {/* Numéro principal */}
+    <div className="flex items-center justify-center gap-2 mb-2">
+      <a
+        href="tel:+261348856227"
+        className="text-muted-foreground text-sm hover:text-accent transition-colors"
+      >
+        +261 34 88 562 27
+      </a>
+      <Button
+        size="sm"
+        variant="outline"
+        className="rounded-full p-1.5 h-7 w-7 hover:bg-accent/10"
+        onClick={() => window.location.href = 'tel:+261348856227'}
+        aria-label="Appeler le numéro principal"
+      >
+        <Phone className="w-3 h-3 text-accent" />
+      </Button>
+    </div>
+
+    {/* Numéro secondaire */}
+    <div className="flex items-center justify-center gap-2 mb-4">
+      <a
+        href="tel:+261324770505"
+        className="text-muted-foreground text-sm hover:text-accent transition-colors"
+      >
+        +261 32 47 705 05
+      </a>
+      <Button
+        size="sm"
+        variant="outline"
+        className="rounded-full p-1.5 h-7 w-7 hover:bg-accent/10"
+        onClick={() => window.location.href = 'tel:+261324770505'}
+        aria-label="Appeler le numéro secondaire"
+      >
+        <Phone className="w-3 h-3 text-accent" />
+      </Button>
+    </div>
+
+    <div className="flex items-center justify-center text-xs text-accent">
+      <Calendar className="w-3 h-3 mr-1" />
+      Lun-Ven 8h-18h
+    </div>
+  </CardContent>
+</Card>
+
+
+              <Card className="card-gradient border-border hover:glow-accent transition-smooth group cursor-pointer"
+              onClick={() => window.open('https://wa.me/+261383867092', '_blank')}
+              >
                 <CardContent className="p-6 text-center">
                   <MessageCircle className="w-10 h-10 text-accent mx-auto mb-4 group-hover:scale-110 transition-smooth" />
                   <h4 className="font-semibold mb-2">WhatsApp</h4>

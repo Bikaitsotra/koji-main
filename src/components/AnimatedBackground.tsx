@@ -23,6 +23,12 @@ const AnimatedBackground = () => {
       'const AI = () => {}',
       'function train() {}',
       'import tensorflow',
+      'import torc',
+      'from datasets import load_dataset',
+      'from transformers import AutoTokenizer',
+      'import AutoModelForCausalLM', 
+      'import Trainer', 
+      'import TrainingArguments',
       'neural.network()',
       'async learn()',
       'class Model {}',
@@ -32,6 +38,8 @@ const AnimatedBackground = () => {
       'def predict():',
       'let brain = new AI()',
       'return solution',
+      'import numpy as np',
+      'import matplotlib.pyplot as plt'
     ];
 
     // Particles for code

@@ -60,7 +60,7 @@ const ProjectsPage = () => {
       title: "Vision par Ordinateur",
       description: "Développement de solutions pour l'analyse et l'interprétation d'images dans une reconnaissence facial utilisant des réseaux de neurones convolutionnels.",
       descriptionModal: "Un projet de vision par ordinateur qui utilise des techniques avancées pour une reconnaissance facial.",
-      technologies: ["OpenCV", "TensorFlow", "Python", "CNN"],
+      technologies: ["OpenCV", "TensorFlow", "Python"],
       category: "Computer Vision",
       color: "text-tech-blue",
       demoImage: computerVisionDemo,
