@@ -40,7 +40,7 @@ const AnimatedBackground = () => {
       'return solution',
       'import numpy as np',
       'import matplotlib.pyplot as plt'
-    ];
+ ];
 
     // Particles for code
     class CodeParticle {
