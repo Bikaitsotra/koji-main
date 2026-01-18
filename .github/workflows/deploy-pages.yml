@@ -1,10 +1,8 @@
-# Workflow : build et déploie le dossier `dist/` sur GitHub Pages à chaque push sur main
-# Remplacez la commande de build si votre script s'appelle autrement.
-name: Build and Deploy to GitHub Pages
+name: Build, Test and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ] # changez si votre branche par défaut est 'master' ou autre
+    branches: [ "main" ] # changez si nécessaire
 
 jobs:
   build:
@@ -18,8 +16,21 @@ jobs:
         with:
           node-version: "18"
 
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Run tests
+        # --if-present évite l'échec si le script "test" n'existe pas
+        # "-- --ci" passe l'option --ci à Jest (ou autre) pour exécuter en mode CI si supporté
+        run: npm test --if-present -- --ci
 
       - name: Build
         run: npm run build
