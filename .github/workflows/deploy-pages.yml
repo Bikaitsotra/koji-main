@@ -1,5 +1,5 @@
-# Workflow : build et déploye le dossier `build/` sur GitHub Pages à chaque push sur main
-# Modifiez `npm run build` et `path: build` si votre projet utilise une autre commande ou dossier (ex: `dist`).
+# Workflow : build et déploie le dossier `dist/` sur GitHub Pages à chaque push sur main
+# Remplacez la commande de build si votre script s'appelle autrement.
 name: Build and Deploy to GitHub Pages
 
 on:
@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: build
+          path: dist
 
   deploy:
     runs-on: ubuntu-latest
