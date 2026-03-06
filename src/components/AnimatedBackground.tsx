@@ -41,7 +41,6 @@ const AnimatedBackground = () => {
       'import numpy as np',
       'import matplotlib.pyplot as plt'
  ];
-
     // Particles for code
     class CodeParticle {
       x: number;
